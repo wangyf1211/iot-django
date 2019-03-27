@@ -73,6 +73,13 @@ CORS_ALLOW_HEADERS = (
     'x-requested-with',
 )
 
+CORS_ORIGIN_WHITELIST = (
+    '127.0.0.1:5500',
+    'localhost:5500', #凡是出现在白名单中的域名，都可以访问后端接口
+)
+
+CORS_ALLOW_CREDENTIALS = True
+
 ROOT_URLCONF = 'iot.urls'
 
 TEMPLATES = [
