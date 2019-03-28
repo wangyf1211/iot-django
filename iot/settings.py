@@ -114,8 +114,8 @@ DATABASES = {
             'ENGINE': 'django.db.backends.mysql',    #数据库引擎
             'NAME': 'iot',  #数据库名
             'USER': 'root',   #账户名
-            'PASSWORD': 'root', #密码
-            'HOST': 'localhost', #主机
+            'PASSWORD': 'pAssword123.', #密码
+            'HOST': '172.19.240.71', #主机
             'PORT': '3306', #端口
         }
 }
