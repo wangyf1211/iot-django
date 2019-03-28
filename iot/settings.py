@@ -25,7 +25,7 @@ SECRET_KEY = '3zeb@icui5*g9if@5101bym8=b0ze1)&k(u6qqt%djk!=a#3t1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -115,7 +115,7 @@ DATABASES = {
             'NAME': 'iot',  #数据库名
             'USER': 'root',   #账户名
             'PASSWORD': '123456', #密码
-            'HOST': '39.108.186.54', #主机
+            'HOST': '127.0.0.1', #主机
             'PORT': '3306', #端口
         }
 }

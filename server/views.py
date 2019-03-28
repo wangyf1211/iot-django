@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from django.http import JsonResponse,HttpResponse
+from django.http import JsonResponse, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
-from .models import Distance,Temp
+from .models import Distance, Temp
 from django.core import serializers
 from django.core.serializers.json import DjangoJSONEncoder
 
@@ -16,12 +16,13 @@ def hello(request):
 @csrf_exempt
 def get_distance(request):
     if request.method == 'GET':
-        data=serializers.serialize('python',Distance.objects.all())
-        res={
-            'success':True,
-            'data':data
+        data = serializers.serialize('python', Distance.objects.order_by('create_time').reverse()[:50])
+        res = {
+            'success': True,
+            'data': data
         }
-        return HttpResponse(json.dumps(res,cls=DjangoJSONEncoder),content_type='application/json')
+        return HttpResponse(json.dumps(res, cls=DjangoJSONEncoder), content_type='application/json')
+
 
 @csrf_exempt
 def get_temp(request):
