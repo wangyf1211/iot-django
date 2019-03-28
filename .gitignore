@@ -1,2 +1,5 @@
 .idea/
 venv/
+iot/__pycache__/
+server/__pycache__/
+server/migrations/__pycache__/
